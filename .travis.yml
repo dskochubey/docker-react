@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t dskochubey/docker-react -f Dockerfile .
+    - docker build -t dskochubey/docker-react -f Dockerfile.dev .
 
 script:
     - docker run -e CI=true dskochubey/docker-react yarn test 
